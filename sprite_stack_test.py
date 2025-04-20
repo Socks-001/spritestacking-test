@@ -1,5 +1,10 @@
 import pygame
 import math
+import os
+import sys
+
+# Set the working directory to the directory of the script
+os.chdir(os.path.dirname(os.path.abspath(sys.argv[0])))
 
 pygame.init()
 
@@ -16,7 +21,7 @@ class SpriteStackTest:
         self.clock = pygame.time.Clock()
         self.debug_slice = 0  # Start with full stack display
         self.debug_enabled = False
-        self.input_cooldown = 20  # Cooldown in milliseconds
+        self.input_cooldown = 30  # Cooldown in milliseconds
         self.last_input_time = 0  # Tracks the last time an input was processed
 
         # Load the horizontal sprite sheets
